@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+@import 'mixins';
+
+@include font-face("Montserrat", "../fonts/MontserratRegular/MontserratRegular", normal); 
+@include font-face("Montserrat", "../fonts/MontserratBold/MontserratBold", 700);
+
+
+/*** MIXINS USAGE ***
+
+	@include xs(12);
+	@include sm(12);
+	@include md(12);
+	@include lg(12);
+
+	@include r(768);
+	@include rmin(768);
+
+	@include trans / trans($what $dur $easing);
+	@include cover;
+
+	@include centerX / centerXa
+	@include centerY / centerYa
+
+***/
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	color: #37474F;
+}
+
+.header {
+    padding: 30px 65px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 113px;
+    z-index: 10;
+    mix-blend-mode: exclusion;
+    filter: invert(65%);
+    &__logo {
+    	width: 50px;
+    	img {
+    		width: 100%;
+    	}
+    }
+    &__menu {
+    	position: absolute;
+    	top: 30px;
+    	right: 65px;
+    	width: 50px;
+    }
+}
+
+.portfolio {
+	position: relative;
+	padding: 30px 65px;
+	li.visible {
+		p span, a span {
+			transform: translateY(0);
+		}
+		.arrow {
+			transform: translateY(0);
+		}
+		img {
+			opacity: 1;
+			transform: translate(-50%,-50%) scale(1.2);
+		}
+	}
+	li span, .arrow {
+		transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	}
+	img {
+		position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    width: 650px;
+	    opacity: 0;
+	    transition: opacity .8s linear, transform 8s ease-out;
+	}
+	&__info {
+		margin-left: 65px;
+		@include centerYa;
+		left: 0;
+		color: #fff;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+	    margin-bottom: 7px;
+	    overflow: hidden;	    
+	    span {
+	    	display: block;
+			transform: translateY(-100%);
+		}
+	}
+	&__desc {
+		font-size: 10px;
+		overflow: hidden;
+		span {
+			display: block;
+			transform: translateY(100%);
+		}
+	}
+	&__site {
+		display: block;
+		transform: translateY(-100%);
+	}
+
+	&__visit {
+		display: block;
+		transform: translateY(100%);
+	}
+	&__link {
+	    padding-right: 32px;
+		@include centerYa;
+		right: 65px;
+		color: #fff;
+		text-align: right;
+		font-size: 10px;
+		overflow: hidden;
+		a {
+			color: #fff;
+			overflow: hidden;
+			display: block;
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+			strong {
+				font-size: 13px;
+			    display: inline-block;
+	    		margin-bottom: 5px;
+			}
+		}
+		.arrow {
+			position: absolute;
+			right: 0;
+			top: 6px;
+			left: initial;
+			width: initial;
+			height: initial;
+			transform: translateY(-15px);
+		}
+	}
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: calc(100% + 9px);
+	padding: 0;
+	margin: -9px 0 0;
+	max-width: 100%;
+	overflow: hidden;
+	ul {
+		margin: 0;
+		padding: 0;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    overflow: hidden;
+	    transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	    &.trans {
+	    	li span, .arrow {
+	    		transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+	    		transition-delay: 1000ms;
+	    	}
+	    }
+	    &.animate {
+	    	top: 100px;
+	    	right: 120px;
+	    	left: 120px;
+	    	bottom: 100px;
+	    	.portfolio__title span {
+				transform: translateY(-100%);
+	    	}
+	    	.portfolio__desc span {
+	    		transform: translateY(100%);
+	    	}
+	    	.portfolio__site {
+	    		transform: translateY(-100%);
+	    	}
+	    	.portfolio__visit {
+	    		transform: translateY(100%);
+	    	}
+	    	.arrow {
+	    		transform: translateY(-15px);
+	    	}
+	    }
+	}
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50);
+}
+
+.slider-img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.slider-controls {
+    mix-blend-mode: exclusion;
+    -webkit-filter: invert(65%);
+    filter: invert(65%);
+}
