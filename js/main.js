@@ -75,25 +75,33 @@ jQuery(document).ready(function(){
 		slider.on('swipeleft', function(event){
 		setTimeout(function() {
 			nextSlide(slider, sliderControls, pathArray);
-			},200);
-			$('.slider').removeClass('trans');
-			$('.slider').addClass('animate');
-			setTimeout(function() {
-				$('.slider').removeClass('animate');
-				$('.slider').addClass('trans');
-			},1200);
+		},200);
+		$('.slider').removeClass('trans');
+		$('.slider').addClass('animate');
+		$('.text__word').animate({opacity: 0},100);
+		setTimeout(function() {
+			$('.slider').removeClass('animate');
+			$('.slider').addClass('trans');
+		},1200);
+		setTimeout(function() {
+			tl.restart()
+		},1600);
 			
 		});
 		slider.on('swiperight', function(event){			
 		setTimeout(function() {
-				prevSlide(slider, sliderControls, pathArray);
-			},200);
-			$('.slider').removeClass('trans');
-			$('.slider').addClass('animate');
-			setTimeout(function() {
-				$('.slider').removeClass('animate');
-				$('.slider').addClass('trans');
-			},1200)
+			prevSlide(slider, sliderControls, pathArray);
+		},200);
+		$('.slider').removeClass('trans');
+		$('.slider').addClass('animate');
+		$('.text__word').animate({opacity: 0},100);
+		setTimeout(function() {
+			$('.slider').removeClass('animate');
+			$('.slider').addClass('trans');
+		},1200);
+		setTimeout(function() {
+			tl.restart()
+		},1600);
 		});
 
 		//update visible slide when user clicks .slider-controls buttons
@@ -101,8 +109,9 @@ jQuery(document).ready(function(){
 			event.preventDefault();
 			var selectedItem = $(this);
 			if(!selectedItem.hasClass('selected')) {
+
 				setTimeout(function() {
-					// if it's not already selected
+						// if it's not already selected
 				var selectedSlidePosition = selectedItem.index(),
 					selectedSlide = slider.children('li').eq(selectedSlidePosition),
 					visibleSlide = retrieveVisibleSlide(slider),
@@ -113,10 +122,15 @@ jQuery(document).ready(function(){
 				},200);
 				$('.slider').removeClass('trans');
 				$('.slider').addClass('animate');
+				$('.text__word').animate({opacity: 0},100);
 				setTimeout(function() {
 					$('.slider').removeClass('animate');
 					$('.slider').addClass('trans');
-				},1200)
+				},1200);
+				setTimeout(function() {
+					tl.restart()
+				},1600);
+
 				
 			}
 		});
@@ -129,10 +143,14 @@ jQuery(document).ready(function(){
 				},200);
 				$('.slider').removeClass('trans');
 				$('.slider').addClass('animate');
+				$('.text__word').animate({opacity: 0},100);
 				setTimeout(function() {
 					$('.slider').removeClass('animate');
 					$('.slider').addClass('trans');
-				},1200)
+				},1200);
+				setTimeout(function() {
+					tl.restart()
+				},1600);
 			} else if( event.which=='39' && elementInViewport(slider.get(0)) ) {
 
 				setTimeout(function() {
