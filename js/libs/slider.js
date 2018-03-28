@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
 		http://stackoverflow.com/questions/25265197/how-to-convert-a-cubic-bezier-value-to-a-custom-mina-easing-snap-svg
 	*/
 	var duration = 500,
-		epsilon = (1000 / 60 / duration) / 4,
+		epsilon = (200 / 60 / duration) / 4,
 		firstCustomMinaAnimation = bezier(.42,.03,.77,.63, epsilon),
 		secondCustomMinaAnimation = bezier(.27,.5,.6,.99, epsilon),
 		animating = false;
@@ -34,50 +34,50 @@ jQuery(document).ready(function(){
 			event.preventDefault();
 			setTimeout(function() {
 			nextSlide(slider, sliderControls, pathArray);
-			},1000);
+			},200);
 			$('.slider').removeClass('trans');
 			$('.slider').addClass('animate');
 			setTimeout(function() {
 				$('.slider').removeClass('animate');
 				$('.slider').addClass('trans');
-			},2200);
+			},1200);
 		});
 		sliderNav.on('click', '.prev-slide', function(event){
 			event.preventDefault();
 			setTimeout(function() {
 				prevSlide(slider, sliderControls, pathArray);
-			},1000);
+			},200);
 			$('.slider').removeClass('trans');
 			$('.slider').addClass('animate');
 			setTimeout(function() {
 				$('.slider').removeClass('animate');
 				$('.slider').addClass('trans');
-			},2200)
+			},1200)
 		});
 
 		//detect swipe event on mobile - update visible slide
 		slider.on('swipeleft', function(event){
 		setTimeout(function() {
 			nextSlide(slider, sliderControls, pathArray);
-			},1000);
+			},200);
 			$('.slider').removeClass('trans');
 			$('.slider').addClass('animate');
 			setTimeout(function() {
 				$('.slider').removeClass('animate');
 				$('.slider').addClass('trans');
-			},2200);
+			},1200);
 			
 		});
 		slider.on('swiperight', function(event){			
 		setTimeout(function() {
 				prevSlide(slider, sliderControls, pathArray);
-			},1000);
+			},200);
 			$('.slider').removeClass('trans');
 			$('.slider').addClass('animate');
 			setTimeout(function() {
 				$('.slider').removeClass('animate');
 				$('.slider').addClass('trans');
-			},2200)
+			},1200)
 		});
 
 		//update visible slide when user clicks .slider-controls buttons
@@ -94,13 +94,13 @@ jQuery(document).ready(function(){
 					direction = '';
 				direction = ( visibleSlidePosition < selectedSlidePosition) ? 'next': 'prev';
 				updateSlide(visibleSlide, selectedSlide, direction, sliderControls, pathArray);
-				},1000);
+				},200);
 				$('.slider').removeClass('trans');
 				$('.slider').addClass('animate');
 				setTimeout(function() {
 					$('.slider').removeClass('animate');
 					$('.slider').addClass('trans');
-				},2200)
+				},1200)
 				
 			}
 		});
@@ -110,23 +110,23 @@ jQuery(document).ready(function(){
 			if(event.which=='37' && elementInViewport(slider.get(0)) ) {				
 				setTimeout(function() {
 					prevSlide(slider, sliderControls, pathArray);
-				},1000);
+				},200);
 				$('.slider').removeClass('trans');
 				$('.slider').addClass('animate');
 				setTimeout(function() {
 					$('.slider').removeClass('animate');
 					$('.slider').addClass('trans');
-				},2200)
+				},1200)
 			} else if( event.which=='39' && elementInViewport(slider.get(0)) ) {
 				setTimeout(function() {
 					nextSlide(slider, sliderControls, pathArray);
-				},1000);
+				},200);
 				$('.slider').removeClass('trans');
 				$('.slider').addClass('animate');
 				setTimeout(function() {
 					$('.slider').removeClass('animate');
 					$('.slider').addClass('trans');
-				},2200);
+				},1200);
 			}
 		});
 	}
