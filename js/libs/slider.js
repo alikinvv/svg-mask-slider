@@ -85,7 +85,8 @@ jQuery(document).ready(function(){
 			event.preventDefault();
 			var selectedItem = $(this);
 			if(!selectedItem.hasClass('selected')) {
-				// if it's not already selected
+				setTimeout(function() {
+					// if it's not already selected
 				var selectedSlidePosition = selectedItem.index(),
 					selectedSlide = slider.children('li').eq(selectedSlidePosition),
 					visibleSlide = retrieveVisibleSlide(slider),
@@ -93,6 +94,14 @@ jQuery(document).ready(function(){
 					direction = '';
 				direction = ( visibleSlidePosition < selectedSlidePosition) ? 'next': 'prev';
 				updateSlide(visibleSlide, selectedSlide, direction, sliderControls, pathArray);
+				},1000);
+				$('.slider').removeClass('trans');
+				$('.slider').addClass('animate');
+				setTimeout(function() {
+					$('.slider').removeClass('animate');
+					$('.slider').addClass('trans');
+				},2200)
+				
 			}
 		});
 
