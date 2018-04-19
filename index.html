@@ -3,173 +3,177 @@
 <head lang="ru">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/libs/bootstrap.min.css">
-    <link rel="stylesheet" href="css/libs/slider.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
 </head>
 <body>
 
-	<header class="header">
-		<div class="header__logo">
-			<img src="img/logo.svg" alt="">
-		</div>
-		<div class="header__menu">
-			<img src="img/menu.svg" alt="">
-		</div>
+<!-- CONTENT -->
 
-	</header>
+<header class="header">
+    <a href="/" class="header__logo">
+        <svg class="icon"><use xlink:href="img/sprite.svg#logo"></use></svg>
+    </a>
+    <div class="header__menu">
+        <svg class="icon"><use xlink:href="img/sprite.svg#menu"></use></svg>
+    </div>
 
-	<div class="portfolio slider-wrapper">
-		<ul class="slider" data-step1="M1402,800h-2V0h1c0.6,0,1,0.4,1,1V800z" data-step2="M1400,800H379L771.2,0H1399c0.6,0,1,0.4,1,1V800z" data-step3="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z" data-step4="M-2,800h2V0h-1c-0.6,0-1,0.4-1,1V800z" data-step5="M0,800h1021L628.8,0L1,0C0.4,0,0,0.4,0,1L0,800z" data-step6="M0,800h1400V0L1,0C0.4,0,0,0.4,0,1L0,800z">
+</header>
 
-			<li class="visible">
-				<div class="svg-wrapper">
-					<svg viewBox="0 0 1400 800">
-						<defs>
-							<clipPath id="image-1">
-								<path id="changing-path-1" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
-							</clipPath>							
-						</defs>						
-						<image height='100%' width="100%" clip-path="url(#image-1)" href="img/2.jpg"></image>
-						<div class="portfolio__info">
-							<p class="portfolio__title text">
-								<span class="text__first">
-									<span class="text__word">Karbokam</span>
-									<span class="text__first-bg" style="background-color: #3A7E94"></span>
-								</span>
-							</p>
-							<p class="portfolio__desc text">
-								<span class="text__second">
-									<span class="text__word">Production of technical carboxymethyl cellulose <br> (CMC) and polyanionic cellulose (PAC)</span>
-									<span class="text__second-bg" style="background-color: #E688A1"></span>
-								</span>
-							</p>
-						</div>
-						<div class="portfolio__link cd-slider-navigation">
-							<a href="#0" class="next-slide portfolio__site text">
-								<span class="text__first">
-									<span class="text__word">Visit karbokam.ru <img class="arrow" src="img/arrow.svg" alt=""></span>
-									<span class="text__first-bg" style="background-color: #3A7E94"></span>
-								</span>
-							</a>
-							<p class="portfolio__visit text">
-								<span class="text__second">
-									<span class="text__word">Official website</span>
-									<span class="text__second-bg" style="background-color: #E688A1"></span>
-								</span>
-							</p>
-						</div>
-					</svg>
-				</div> <!-- .svg-wrapper -->
-			</li>
+<div class="portfolio slider-wrapper">
+    <ul class="slider" data-step1="M1402,800h-2V0h1c0.6,0,1,0.4,1,1V800z" data-step2="M1400,800H379L771.2,0H1399c0.6,0,1,0.4,1,1V800z" data-step3="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z" data-step4="M-2,800h2V0h-1c-0.6,0-1,0.4-1,1V800z" data-step5="M0,800h1021L628.8,0L1,0C0.4,0,0,0.4,0,1L0,800z" data-step6="M0,800h1400V0L1,0C0.4,0,0,0.4,0,1L0,800z">
 
-			<li>
-				<div class="svg-wrapper">
-					<svg viewBox="0 0 1400 800">
-						<defs>
-							<clipPath id="image-2">
-								<path id="changing-path-2" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
-							</clipPath>
-						</defs>
-						<image height='100%' width="100%" clip-path="url(#image-2)" href="img/1.jpg"></image>	
-						
-						<div class="portfolio__info">
-							<p class="portfolio__title text">
-								<span class="text__first">
-									<span class="text__word">UAZ KD</span>
-									<span class="text__first-bg" style="background-color: #535986"></span>
-								</span>
-							</p>
-							<p class="portfolio__desc text">
-								<span class="text__second">
-									<span class="text__word">Authorized distributor of UAZ (Ulyanovsk Automobile <br> Plant)</span>
-									<span class="text__second-bg" style="background-color: #DABDB2"></span>
-								</span>
-							</p>
+        <li class="visible">
+            <div class="svg-wrapper">
+                <svg viewBox="0 0 1400 800">
+                    <defs>
+                        <clipPath id="image-1">
+                            <path id="changing-path-1" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                        </clipPath>							
+                    </defs>						
+                    <image height='100%' width="100%" clip-path="url(#image-1)" href="img/2.jpg"></image>
+                    <div class="slider__info">
+                        <p class="slider__title text">
+                            <span class="text__first">
+                                <span class="text__word">Karbokam</span>
+                                <span class="text__first-bg" style="background-color: #3A7E94"></span>
+                            </span>
+                        </p>
+                        <p class="slider__desc text">
+                            <span class="text__second">
+                                <span class="text__word">Production of technical carboxymethyl cellulose <br> (CMC) and polyanionic cellulose (PAC)</span>
+                                <span class="text__second-bg" style="background-color: #E688A1"></span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="slider__link cd-slider-navigation">
+                        <a href="#0" class="next-slide slider__site text">
+                            <span class="text__first">
+                                <span class="text__word">Visit karbokam.ru <img class="arrow" src="img/arrow.svg" alt=""></span>
+                                <span class="text__first-bg" style="background-color: #3A7E94"></span>
+                            </span>
+                        </a>
+                        <p class="slider__visit text">
+                            <span class="text__second">
+                                <span class="text__word">Official website</span>
+                                <span class="text__second-bg" style="background-color: #E688A1"></span>
+                            </span>
+                        </p>
+                    </div>
+                </svg>
+            </div> <!-- .svg-wrapper -->
+        </li>
 
-						</div>
-						<div class="portfolio__link cd-slider-navigation">
-							<a href="#0" class="next-slide portfolio__site text">
-								<span class="text__first">
-									<span class="text__word">Visit uaz159.ru<img class="arrow" src="img/arrow.svg" alt=""></span>
-									<span class="text__first-bg" style="background-color: #535986"></span>
-								</span>
-							</a>
-							<p class="portfolio__visit text">
-								<span class="text__second">
-									<span class="text__word">Official website</span>
-									<span class="text__second-bg" style="background-color: #DABDB2"></span>
-								</span>
-							</p>
-						</div>				
-					</svg>
+        <li>
+            <div class="svg-wrapper">
+                <svg viewBox="0 0 1400 800">
+                    <defs>
+                        <clipPath id="image-2">
+                            <path id="changing-path-2" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                        </clipPath>
+                    </defs>
+                    <image height='100%' width="100%" clip-path="url(#image-2)" href="img/1.jpg"></image>	
+                    
+                    <div class="slider__info">
+                        <p class="slider__title text">
+                            <span class="text__first">
+                                <span class="text__word">UAZ KD</span>
+                                <span class="text__first-bg" style="background-color: #535986"></span>
+                            </span>
+                        </p>
+                        <p class="slider__desc text">
+                            <span class="text__second">
+                                <span class="text__word">Authorized distributor of UAZ (Ulyanovsk Automobile <br> Plant)</span>
+                                <span class="text__second-bg" style="background-color: #DABDB2"></span>
+                            </span>
+                        </p>
 
-				</div> <!-- .svg-wrapper -->
-			</li>
+                    </div>
+                    <div class="slider__link cd-slider-navigation">
+                        <a href="#0" class="next-slide slider__site text">
+                            <span class="text__first">
+                                <span class="text__word">Visit uaz159.ru<img class="arrow" src="img/arrow.svg" alt=""></span>
+                                <span class="text__first-bg" style="background-color: #535986"></span>
+                            </span>
+                        </a>
+                        <p class="slider__visit text">
+                            <span class="text__second">
+                                <span class="text__word">Official website</span>
+                                <span class="text__second-bg" style="background-color: #DABDB2"></span>
+                            </span>
+                        </p>
+                    </div>				
+                </svg>
 
-			<li>
-				<div class="svg-wrapper">
-					<svg viewBox="0 0 1400 800">
-						<defs>
-							<clipPath id="image-3">
-								<path id="changing-path-3" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
-							</clipPath>
-						</defs>
-						<image height='100%' width="100%" clip-path="url(#image-3)" href="img/3.jpg"></image>	
-						
-						<div class="portfolio__info">
-							<p class="portfolio__title text">
-								<span class="text__first">
-									<span class="text__word">Karbokam</span>
-									<span class="text__first-bg" style="background-color: #1ABDFE"></span>
-								</span>
-							</p>
-							<p class="portfolio__desc text">
-								<span class="text__second">
-									<span class="text__word">Production of technical carboxymethyl cellulose <br> (CMC) and polyanionic cellulose (PAC)</span>
-									<span class="text__second-bg" style="background-color: #CB1537"></span>
-								</span>
-							</p>
-						</div>
-						<div class="portfolio__link cd-slider-navigation">
-							<a href="#0" class="next-slide portfolio__site text">
-								<span class="text__first">
-									<span class="text__word">Visit karbokam.ru <img class="arrow" src="img/arrow.svg" alt=""></span>
-									<span class="text__first-bg" style="background-color: #1ABDFE"></span>
-								</span>
-							</a>
-							<p class="portfolio__visit text">
-								<span class="text__second">
-									<span class="text__word">Official website</span>
-									<span class="text__second-bg" style="background-color: #CB1537"></span>
-								</span>
-							</p>
-						</div>			
-					</svg>
+            </div> <!-- .svg-wrapper -->
+        </li>
 
-				</div> <!-- .svg-wrapper -->
-			</li>
+        <li>
+            <div class="svg-wrapper">
+                <svg viewBox="0 0 1400 800">
+                    <defs>
+                        <clipPath id="image-3">
+                            <path id="changing-path-3" d="M1400,800H0V0h1399c0.6,0,1,0.4,1,1V800z"/>
+                        </clipPath>
+                    </defs>
+                    <image height='100%' width="100%" clip-path="url(#image-3)" href="img/3.jpg"></image>	
+                    
+                    <div class="slider__info">
+                        <p class="slider__title text">
+                            <span class="text__first">
+                                <span class="text__word">Karbokam</span>
+                                <span class="text__first-bg" style="background-color: #1ABDFE"></span>
+                            </span>
+                        </p>
+                        <p class="slider__desc text">
+                            <span class="text__second">
+                                <span class="text__word">Production of technical carboxymethyl cellulose <br> (CMC) and polyanionic cellulose (PAC)</span>
+                                <span class="text__second-bg" style="background-color: #CB1537"></span>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="slider__link cd-slider-navigation">
+                        <a href="#0" class="next-slide slider__site text">
+                            <span class="text__first">
+                                <span class="text__word">Visit karbokam.ru <img class="arrow" src="img/arrow.svg" alt=""></span>
+                                <span class="text__first-bg" style="background-color: #1ABDFE"></span>
+                            </span>
+                        </a>
+                        <p class="slider__visit text">
+                            <span class="text__second">
+                                <span class="text__word">Official website</span>
+                                <span class="text__second-bg" style="background-color: #CB1537"></span>
+                            </span>
+                        </p>
+                    </div>			
+                </svg>
 
-		</ul> <!-- .slider -->
+            </div> <!-- .svg-wrapper -->
+        </li>
 
-		<ol class="slider-controls">
-      		<li class="selected"><a href="#0"><em>Item 1</em></a></li>
-	    	<li><a href="#0"><em>Item 2</em></a></li>
-	    	<li><a href="#0"><em>Item 2</em></a></li>
-	      <!-- other list items here -->
-	   </ol> <!-- .slider-controls -->
-	</div> <!-- .slider-wrapper -->
+    </ul> <!-- .slider -->
+
+    <ol class="slider-controls">
+          <li class="selected"><a href="#0"><em>Item 1</em></a></li>
+        <li><a href="#0"><em>Item 2</em></a></li>
+        <li><a href="#0"><em>Item 2</em></a></li>
+      <!-- other list items here -->
+   </ol> <!-- .slider-controls -->
+</div> <!-- .slider-wrapper -->
+
 
 <script src="js/libs/jquery-2.1.4.js"></script>
 <script src="js/libs/jquery.mobile.custom.min.js"></script>
 <script src="js/libs/snap.svg-min.js"></script>
 <script src="js/libs/bootstrap.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+<script src="js/slider.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
