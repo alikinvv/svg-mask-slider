@@ -6,6 +6,6 @@
 
 ## [Live Demo](https://alikinvv.github.io/svg-mask-slider/)
 
-![svg mask slider](https://cdn.dribbble.com/users/1773016/screenshots/6070854/3.gif)
+![svg mask slider](/img/gif.gif?raw=true)
 
 [![Analytics](https://ga-beacon.appspot.com/UA-31485994-5/svg-mask-slider-repo)](https://github.com/alikinvv/svg-mask-slider)
