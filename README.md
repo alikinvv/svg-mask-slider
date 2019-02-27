@@ -2,6 +2,8 @@
 
 [![GitHub Issues](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/alikinvv/svg-mask-slider/issues)  [![HitCount](http://hits.dwyl.com/alikinvv/svg-mask-slider.svg)](http://hits.dwyl.com/alikinvv/svg-mask-slider)  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)  [![Donations Badge](https://yourdonation.rocks/images/badge.svg)](https://www.paypal.me/alikinvv)
 
+A touch-enabled image slider that smoothly transitions between images and text using SVG clipping and masking technology.
+
 :star: Star us on GitHub — it helps!
 
 ## [Live Demo](https://alikinvv.github.io/svg-mask-slider/)
